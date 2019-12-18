@@ -9,11 +9,11 @@
 <body>
 	
 	
-	<form action="/student/save"  method="POST">
+	<form action="/student?cmd=save"  method="POST">
 	<input type="hidden" name="id" value="${student.id}">
 		姓名：<input type="text" name="name" value="${student.name}"  required="required"/><br/> 
 		年龄：<input type="text" name="age" value="${student.age}"   required="required"/><br/><br/> 
-		<input type="submit" value="保存学生信息">
+		<input type="submit" value="${student == null ? "保存学生信息":"更新学生信息"}">
 	</form>
 </body>
 </html>
