@@ -1,0 +1,31 @@
+这里实际上有三件事：origin master是两件事，origin/master一件事。共计三件事。
+
+两个分支：
+
+master 是一个本地分支
+origin/master是远程分支（它是名为“origin” 的远程分支的本地副本，名为“master”）
+一个遥控器：
+
+origin 是一个遥远的
+示例：拉入两个步骤
+由于origin/master是分支，您可以合并它。这里有两个步骤：
+
+第一步，master从遥控器中取出origin。该master分支上origin会被获取并在本地副本将被命名为origin/master。
+
+git fetch origin master
+然后你合并origin/master进去master。
+
+git merge origin/master
+然后，您可以将新的更改推master回到origin：
+
+git push origin master
+更多例子
+您可以按名称获取多个分支...
+
+git fetch origin master stable oldstable
+你可以合并多个分支......
+
+git merge origin/master hotfix-2275 hotfix-2276 hotfix-2290
+————————————————
+版权声明：本文为CSDN博主「ZHcn_G」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/u014599371/article/details/90055737
